@@ -1,6 +1,5 @@
 package com.teaching.teachers.exceptions;
 
-import com.teaching.teachers.exceptions.ResourceNotFoundException;
 import org.springframework.http.*;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
