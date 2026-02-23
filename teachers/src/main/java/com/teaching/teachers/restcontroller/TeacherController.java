@@ -4,6 +4,7 @@ import com.teaching.teachers.dtos.TeacherRequestDTO;
 import com.teaching.teachers.dtos.TeacherResponseDTO;
 import com.teaching.teachers.services.TeacherService;
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,9 +30,13 @@ public class TeacherController {
         return ResponseEntity.ok(teacherService.getTeacherById(id));
     }
 
+    //@PostMapping
+    //public TeacherResponseDTO createTeacher(@Valid @RequestBody TeacherRequestDTO dto) {
+        //return teacherService.createTeacher(dto);
+
     @PostMapping
-    public TeacherResponseDTO createTeacher(@Valid @RequestBody TeacherRequestDTO dto) {
-        return teacherService.createTeacher(dto);
+    public ResponseEntity<TeacherResponseDTO> createTeacher(@Valid @RequestBody TeacherRequestDTO dto) {
+            return new ResponseEntity<>(teacherService.createTeacher(dto), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")

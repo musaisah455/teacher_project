@@ -40,6 +40,10 @@ public class TeacherService {
         // Option 1: simple field-by-field (if you prefer control)
         // teacher.setFirstName(dto.getFirstName());
         // ...
+        //teacher.setFirstName(dto.getFirstName());
+        //teacher.setLastName(dto.getLastName());
+        //teacher.setAddress(dto.getAddress() == null ? null : dto.getAddress());
+        //teacher.setSchool(dto.getSchool() == null ? null : dto.getSchool());
 
         // Option 2: use MapStruct update method (recommended for larger entities)
         teacherMapper.updateEntityFromDto(dto, teacher);
