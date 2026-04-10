@@ -35,10 +35,6 @@ public class AuthController {
                 .role(request.getRole() != null ? request.getRole() : Role.USER)
                 .build();
 
-        //userRepository.save(user);
-
-        //System.out.println(user);
-
         return new ResponseEntity<>(userRepository.save(user), HttpStatus.CREATED);
 
         //return ResponseEntity.ok(new AuthenticationResponse("User registered successfully"));
