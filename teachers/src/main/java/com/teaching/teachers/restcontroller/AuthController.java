@@ -36,7 +36,7 @@ public class AuthController {
                 .build();
 
         return new ResponseEntity<>(userRepository.save(user), HttpStatus.CREATED);
-        
+
     }
 
     @PostMapping("/login")
