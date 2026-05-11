@@ -40,7 +40,7 @@ A secure RESTful Spring Boot application for managing teachers' information (fir
 
 ```bash
 git clone https://github.com/musaisah455/teacher-project.git
-cd teacher-project
+cd teacher_project
 ```
 
 Install dependencies
