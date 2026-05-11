@@ -71,7 +71,7 @@ Application starts at: http://localhost:8080/api/teachers
 ### Register a user
 
 #### POST http://localhost:8080/auth/register
-````
+````bash
 {
 
 "username": "admin",
