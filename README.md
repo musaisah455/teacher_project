@@ -71,6 +71,7 @@ Application starts at: http://localhost:8080/api/teachers
 ### Register a user
 
 #### POST http://localhost:8080/auth/register
+
 ````bash
 {
 
@@ -85,6 +86,8 @@ Application starts at: http://localhost:8080/api/teachers
 ### Login with the username and password of the request body of the registered user and get JWT token
 
 #### POST http://localhost:8080/auth/login
+
+````bash
 {
 
 "username": "admin",
@@ -92,7 +95,7 @@ Application starts at: http://localhost:8080/api/teachers
 "password": "admin123"
 
 }
-
+````
 #### Copy the token and use it in headers:
 text Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
