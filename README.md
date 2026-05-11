@@ -71,6 +71,7 @@ Application starts at: http://localhost:8080/api/teachers
 ### Register a user
 
 #### POST http://localhost:8080/auth/register
+````
 {
 
 "username": "admin",
@@ -80,7 +81,7 @@ Application starts at: http://localhost:8080/api/teachers
 "role": "ADMIN"
 
 }
-
+````
 ### Login with the username and password of the request body of the registered user and get JWT token
 
 #### POST http://localhost:8080/auth/login
