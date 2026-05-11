@@ -57,20 +57,23 @@ Application starts at: http://localhost:8080/api/teachers
 
 ## Teacher API Endpoints
 
-### Method----------Endpoint--------------Description-----------Auth-required?
-#### POST----------------/auth/register------------Register new user------------No
-#### POST----------------/auth/login----------------Login & get JWT------------No
-#### POST----------------/api/teachers-------------Create new teacher----------Yes
-#### GET------------------/api/teachers-------------Get all teachers------------Yes
-#### GET-----------------/api/teachers/{id}--------Get teacher by ID------------Yes
-#### PUT-----------------/teachers/{id}-----------Update teacher---------------Yes
-#### DELETE-------------/teachers/{id}-------------Delete teacher---------------Yes
+| Method | Endpoint | Description          | Auth-required?
+|:--- |:--- |:--- |:---
+| POST | /auth/register | Register new user    | No
+| POST | /auth/login | Login & get JWT      | No
+| POST | /api/teachers | Create new teacher   | Yes
+| GET | /api/teachers | Get all teachers     | Yes
+| GET | /api/teachers/{id} | Get teacher by ID    | Yes
+| PUT | /teachers/{id} | Update teacher       | Yes
+| DELETE | /teachers/{id} | Delete teacher       | Yes
 
 ## Authentication
 
 ### Register a user
 
 #### POST http://localhost:8080/auth/register
+
+````bash
 {
 
 "username": "admin",
@@ -80,10 +83,12 @@ Application starts at: http://localhost:8080/api/teachers
 "role": "ADMIN"
 
 }
-
+````
 ### Login with the username and password of the request body of the registered user and get JWT token
 
 #### POST http://localhost:8080/auth/login
+
+````bash
 {
 
 "username": "admin",
@@ -91,7 +96,7 @@ Application starts at: http://localhost:8080/api/teachers
 "password": "admin123"
 
 }
-
+````
 #### Copy the token and use it in headers:
 text Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
